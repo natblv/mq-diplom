@@ -621,7 +621,7 @@
 }
 
 .product-imgbox {
-  width: 100%;
+  margin: 0 auto;
 }
 
 .product-img {
@@ -677,6 +677,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .product-price,
 .product-rub {
   text-transform: uppercase;
