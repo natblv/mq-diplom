@@ -36,7 +36,7 @@
     text-decoration: none;
   }
 
-  h3 {
+  h3, h4 {
     margin: 0;
   }
   
@@ -65,7 +65,7 @@
   }
   
   .header-wrapper {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     padding: 0 15px;
   }
@@ -112,6 +112,10 @@
     font-family: "Open Sans Bold", sans-serif;
     font-size: 45px;
     line-height: 75px;
+  }
+
+  .hamburger-menu {
+    display: none;
   }
 
 /* ============= TRENDS ============ */
@@ -203,14 +207,26 @@
   margin-left: 20px;
 }
 
+.trend-menu-link {
+  color: #b59f5b;
+}
+
+.trend-menu-link:hover {
+  text-decoration: underline;
+}
+
 .trend-name {
   color: #ffffff;
   text-transform: uppercase;
-  font-family: "Open Sans Regular", sans-serif;
+  font-family: "Open Sans Bold", sans-serif;
   font-size: 20px;
   line-height: 24px;
   padding: 0;
   margin: 0;
+}
+
+.trend-name:hover {
+  color: #b59f5b;
 }
 
 .trend-item-1 {
@@ -250,7 +266,7 @@
   }
   
   .main {
-    width: 778px;
+    max-width: 778px;
   }
   .card {
     display: flex;
@@ -338,7 +354,7 @@
   /* ============= ASIDE ============ */
   
   .aside {
-    width: 272px;
+    max-width: 272px;
   }
   
   .aside-item:not(:first-child) {
@@ -388,15 +404,18 @@
   }
   
   .card-new-link {
-    font-family: "Open Sans Bold", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
     color: #000000;
   }
   
   .card-new-link:hover {
     color: #b59f5b;
+  }
+
+  .card-new-title {
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
   }
   
   .new {
@@ -601,16 +620,22 @@
   align-items: flex-end;
 }
 
+.product-imgbox {
+  width: 100%;
+}
+
 .product-img {
   display: block;
+  width: 100%;
   max-height: 200px;
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 .product-body {
-  flex-grow: 1;
-  outline: 3px solid #b59f5b;
-  outline-offset: 20px;
+  border: 3px solid #b59f5b;
+  margin-top: -50px;
+  padding: 50px 20px 30px;
   flex-grow: 1;
 }
 
@@ -624,8 +649,14 @@
 .product-description > p {
   font-size: 15px;
   line-height: 22px;
-  margin-top: 20px;
+  margin-top: 13px;
   margin-bottom: 20px;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 .product-link {
@@ -908,4 +939,106 @@ input[type="radio"] {
   color: #fff;
   background: red;
   cursor: pointer;
+}
+
+/* ============= TABLET============ */
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .header {
+    background-image: url("../images/banner-bg-tablet.jpg");
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .header-menu-list {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
+  .trend-wrp {
+    flex-direction: row;
+    gap: 2px;
+  }
+
+  .trend-item {
+    width: calc(
+      50% - 2px
+    ); /*Ширина равна ширине элемента, из которой вычитается 2px*/
+  }
+
+  .trend-item:nth-child(n + 3) {
+    margin-top: 0;
+  } /*Псевдокласс :nth-child используется для добавления стиля к элементам на основе нумерации в дереве элементов*/
+
+  .page {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .page-wrapper {
+    flex-direction: row-reverse;
+    padding: 0 35px;
+  }
+
+  .aside {
+    flex: none;
+  }
+
+  .main {
+    flex-grow: 1;
+    order: 1;
+  }
+
+  .card {
+    flex-direction: column;
+    max-width: 393px;
+    margin-right: 35px;
+  }
+
+  .card::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 394px;
+    margin-top: 20px;
+    height: 3px;
+    background: #eeeeee;
+  }
+
+  .card:not(:first-of-type) {
+    margin-top: 40px;
+  }
+
+  .card-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .card-menu-list {
+    margin-top: 17px;
+  }
+
+  .card-meta {
+    margin-bottom: 35px;
+  }
+
+  .products {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .product {
+    width: calc(50% - 24px);
+  }
+
+  .product-imgbox {
+    width: 100%;
+  }
+
+  .footer-wrapper {
+    padding: 0 35px;
+  }
 }
