@@ -1047,5 +1047,9 @@ input[type="radio"] {
   .footer {
     padding-top: 50px;
   }
+
+  .footer-address {
+    margin-bottom: 50px;
+  }
 }
 
