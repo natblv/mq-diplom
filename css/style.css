@@ -718,7 +718,7 @@
   }
   
   .footer-wrapper {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     padding: 0 15px;
   }
@@ -1043,4 +1043,9 @@ input[type="radio"] {
   .footer-wrapper {
     padding: 0 35px;
   }
+
+  .footer {
+    padding-top: 50px;
+  }
 }
+
