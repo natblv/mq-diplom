@@ -1040,6 +1040,10 @@ input[type="radio"] {
     width: 100%;
   }
 
+  .product-img {
+    max-height: none;
+  }
+
   .footer-wrapper {
     padding: 0 35px;
   }
