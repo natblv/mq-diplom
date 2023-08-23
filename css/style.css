@@ -952,8 +952,9 @@ input[type="radio"] {
 
 @media (max-width: 1200px) {
   .header {
-    background-image: url("https://i.postimg.cc/tJ7ZxWsQ/banner-bg-tablet.jpg");
+    background-image: url(../images/banner-bg-tablet.jpg);
   }
+    
 
   .hamburger-menu {
     display: block;
@@ -1087,6 +1088,10 @@ input[type="radio"] {
 }
 
 @media (max-width: 640px) {
+  .header {
+    background-image: url(../images/banner-mobile.jpg);
+  }
+  
   .page-wrapper {
     padding: 0 15px;
   }
