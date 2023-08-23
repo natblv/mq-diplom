@@ -425,7 +425,6 @@
   .search {
     margin-top: 60px;
     display: flex;
-    width: 100%;
   }
   
   .visually-hidden {
@@ -439,6 +438,10 @@
     overflow: hidden;
   }
   
+  .search-group {
+    flex-grow: 1;
+  }
+
   .search-field {
     padding-left: 18px;
     width: 222px;
@@ -447,6 +450,8 @@
     line-height: 40px;
     border: none;
     background-color: #f4f7f6;
+
+    width: 100%;
   }
   
   .search-field:focus {
@@ -462,6 +467,8 @@
     background-position: center;
     background-color: #b59f5b;
     cursor: pointer;
+
+    flex-shrink: 0;
   }
   
   .search-button:hover {
@@ -943,9 +950,9 @@ input[type="radio"] {
 
 /* ============= TABLET============ */
 
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .header {
-    background-image: url("../images/banner-bg-tablet.jpg");
+    background-image: url("https://i.postimg.cc/tJ7ZxWsQ/banner-bg-tablet.jpg");
   }
 
   .hamburger-menu {
@@ -955,9 +962,13 @@ input[type="radio"] {
   .header-menu-list {
     display: none;
   }
+
+  .footer-address {
+    margin-top: 50px;
+  }
 }
 
-@media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
+@media (max-width: 1024px) {
   .trend-wrp {
     flex-direction: row;
     gap: 2px;
@@ -990,7 +1001,6 @@ input[type="radio"] {
   .main {
     flex-grow: 1;
     order: 1;
-
     margin-right: 35px;
   }
 
@@ -1002,7 +1012,8 @@ input[type="radio"] {
     content: "";
     display: block;
     position: relative;
-    width: 394px;
+    /*width: 394px;*/
+    width: 100%;
     margin-top: 20px;
     height: 3px;
     background: #eeeeee;
@@ -1047,13 +1058,46 @@ input[type="radio"] {
   .footer-wrapper {
     padding: 0 35px;
   }
+}
 
-  .footer {
-    padding-top: 50px;
+@media (max-width: 768px) {
+  .page {
+    align-items: center;
   }
 
-  .footer-address {
-    margin-bottom: 50px;
+  .page-wrapper {
+    display: block;
+  }
+
+  .main {
+    margin-right: 0;
+  }
+
+  .aside {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+
+  .aside-item {
+    margin-top: 45px;
+  }
+
+  .page {
+    padding-top: 0;
   }
 }
 
+@media (max-width: 640px) {
+  .page-wrapper {
+    padding: 0 15px;
+  }
+  .product {
+    width: 100%;
+  }
+
+  @media (orientation: portrait) {
+    .trend-item {
+      width: 100%;
+    }
+  }
+}
