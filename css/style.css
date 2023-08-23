@@ -159,7 +159,7 @@
     (100% - (var(--elements-in-row-trend) - 1) * var(--container-gap-trend)) /
       var(--elements-in-row-trend)
   );
-  min-height: 320px;
+  height: 320px;
   margin-top: 30px;
   padding: 15px 20px;
   position: relative;
@@ -1012,7 +1012,6 @@ input[type="radio"] {
     content: "";
     display: block;
     position: relative;
-    /*width: 394px;*/
     width: 100%;
     margin-top: 20px;
     height: 3px;
@@ -1091,13 +1090,65 @@ input[type="radio"] {
   .page-wrapper {
     padding: 0 15px;
   }
+  
+  .main {
+    margin-top: 45px;
+  }
+  
+  .aside-item:not(:first-child) {
+    margin-top: 40px;
+  }
+  
   .product {
     width: 100%;
   }
-
+  
+  .header-title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  
+   .trend-item {
+      height: 230px;
+    }
+  
+  .trend-title, .trend-name, .card-name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .product-title {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  
+  .card-text > p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .card-menu-list {
+    margin: 15px 0;
+  }
+  
+  .card-name, .card-meta {
+    margin-bottom: 20px;
+  }
+  
+  .footer-wrapper {
+    padding: 0 15px;
+  }
+  
   @media (orientation: portrait) {
     .trend-item {
       width: 100%;
     }
-  }
+    
+    .trend-item:nth-child(2) {
+     margin-top: 0; 
+    } 
+    
+    .tegs-menu-list {
+     justify-content: space-between;
+    }
 }
