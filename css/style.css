@@ -1196,5 +1196,21 @@ input[type="radio"] {
     .footer-address {
       margin: 40px 0;
     }
+    
+    .popup__content {
+      width: 90%;
+    }
+    
+    .feedback-page {
+      padding: 30px 0;
+    }
+
+    .textarea {
+      height: 130px;
+    }
+
+    .form-row:nth-child(n + 2) {
+      margin-top: 25px;
+    }
   }
 }
