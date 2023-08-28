@@ -82,6 +82,14 @@
     text-transform: uppercase;
   }
   
+  .header-logo-image {
+    width: 180px;
+  }
+  
+  .hamburger-menu-image {
+    width: 60px;
+  }
+
   .header-menu-list {
     list-style-type: none;
     font-size: 13px;
@@ -950,11 +958,11 @@ input[type="radio"] {
 
 /* ============= TABLET============ */
 
+
 @media (max-width: 1200px) {
   .header {
-    background-image: url(../images/banner-bg-tablet.jpg);
+    background-image: url("../images/banner-bg-tablet.jpg");
   }
-    
 
   .hamburger-menu {
     display: block;
@@ -1013,6 +1021,7 @@ input[type="radio"] {
     content: "";
     display: block;
     position: relative;
+    /*width: 394px;*/
     width: 100%;
     margin-top: 20px;
     height: 3px;
@@ -1063,6 +1072,7 @@ input[type="radio"] {
 @media (max-width: 768px) {
   .page {
     align-items: center;
+    padding-top: 0;
   }
 
   .page-wrapper {
@@ -1081,79 +1091,108 @@ input[type="radio"] {
   .aside-item {
     margin-top: 45px;
   }
-
-  .page {
-    padding-top: 0;
-  }
 }
 
 @media (max-width: 640px) {
-  .header {
-    background-image: url(../images/banner-mobile.jpg);
-  }
-  
   .page-wrapper {
     padding: 0 15px;
   }
-  
   .main {
     margin-top: 45px;
   }
-  
+
   .aside-item:not(:first-child) {
     margin-top: 40px;
   }
-  
+
   .product {
     width: 100%;
   }
-  
+
   .header-title {
     font-size: 26px;
     line-height: 36px;
+    padding: 40px 0 190px;
   }
-  
-   .trend-item {
-      height: 230px;
-    }
-  
-  .trend-title, .trend-name, .card-name {
+
+  .trends {
+    margin-top: 45px;
+  }
+
+  .trend-item {
+    height: 230px;
+  }
+
+  .trend-title,
+  .trend-name,
+  .card-name {
     font-size: 16px;
     line-height: 20px;
   }
-  
+
   .product-title {
     font-size: 17px;
     line-height: 22px;
   }
-  
+
   .card-text > p {
     font-size: 14px;
     line-height: 20px;
   }
-  
+
   .card-menu-list {
     margin: 15px 0;
   }
-  
-  .card-name, .card-meta {
+
+  .card-name,
+  .card-meta {
     margin-bottom: 20px;
   }
-  
+
   .footer-wrapper {
     padding: 0 15px;
   }
-  
+
   @media (orientation: portrait) {
+    .header {
+      background-image: url("../images/banner-mobile.jpg");
+    }
+
+    .header-navigation {
+      flex-direction: column-reverse;
+    }
+
+    .header-menu {
+      align-self: flex-end;
+      padding-bottom: 175px;
+    }
+
+    .header-logo-image {
+      width: 270px;
+    }
+
+    .hamburger-menu-image {
+      width: 20px;
+    }
+
     .trend-item {
       width: 100%;
     }
-    
+
     .trend-item:nth-child(2) {
-     margin-top: 0; 
-    } 
-    
-    .tegs-menu-list {
-     justify-content: space-between;
+      margin-top: 0;
     }
+
+    .tegs-menu-list {
+      justify-content: space-between;
+    }
+
+    .card:not(:first-of-type) {
+      margin-top: 35px;
+    }
+
+    .footer-address {
+      margin: 40px 0;
+    }
+  }
 }
