@@ -1185,21 +1185,6 @@ input[type="radio"] {
     margin-right: 0;
   }
 
-  .card {
-    flex-direction: column;
-  }
-
-  .card::after {
-    content: "";
-    display: block;
-    position: relative;
-
-    width: 100%;
-    margin-top: 20px;
-    height: 3px;
-    background: #eeeeee;
-  }
-
   .card-image {
     width: 100%;
     margin: 0;
