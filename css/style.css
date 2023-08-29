@@ -272,7 +272,7 @@
   }
   
   .main {
-    max-width: 778px;
+    max-width: 770px;
   }
   .card {
     display: flex;
@@ -977,6 +977,7 @@ input[type="radio"] {
   .hamburger-menu {
     display: block;
   }
+
   .hamburger-menu-image {
     width: 40px;
   }
@@ -1036,66 +1037,6 @@ input[type="radio"] {
     .header {
       background-image: url("../images/banner-bg-tablet.jpg");
     }
-
-    .page-wrapper {
-      flex-direction: row-reverse;
-      padding: 0 30px;
-    }
-
-    .main {
-      flex-grow: 1;
-      order: 1;
-      margin-right: 35px;
-
-      max-width: 380px;
-    }
-
-    .card {
-      flex-direction: column;
-    }
-
-    .card::after {
-      content: "";
-      display: block;
-      position: relative;
-
-      width: 100%;
-      margin-top: 20px;
-      height: 3px;
-      background: #eeeeee;
-    }
-
-    .card:not(:first-of-type) {
-      margin-top: 40px;
-    }
-
-    .card-image {
-      width: 100%;
-      margin: 0;
-      max-height: none;
-    }
-
-    .card-menu-list {
-      margin: 19px 0 1px;
-    }
-    .card-name {
-      margin-bottom: 25px;
-    }
-
-    .card-meta {
-      margin-bottom: 25px;
-    }
-
-    .card-new:first-of-type {
-      margin-top: 30px;
-    }
-
-    .card-date {
-      margin-bottom: 1px;
-    }
-    .aside-basic-title::after {
-      margin: 10px auto 0;
-    }
   }
 }
 
@@ -1131,6 +1072,68 @@ input[type="radio"] {
 
   .product-img {
     max-height: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .page-wrapper {
+    flex-direction: row-reverse;
+    padding: 0 30px;
+  }
+
+  .main {
+    flex-grow: 1;
+    order: 1;
+    margin-right: 35px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card::after {
+    content: "";
+    display: block;
+    position: relative;
+
+    width: 100%;
+    margin-top: 20px;
+    height: 3px;
+    background: #eeeeee;
+  }
+
+  .card:not(:first-of-type) {
+    margin-top: 40px;
+  }
+
+  .card-image {
+    width: 100%;
+    margin: 0;
+    max-height: none;
+  }
+
+  .card-menu-list {
+    margin: 19px 0 1px;
+  }
+
+  .card-name {
+    margin-bottom: 25px;
+  }
+
+  .card-meta {
+    margin-bottom: 25px;
+  }
+
+  .card-new:first-of-type {
+    margin-top: 30px;
+  }
+
+  .card-date {
+    margin-bottom: 1px;
+  }
+
+  .aside-basic-title::after {
+    margin: 10px auto 0;
   }
 }
 
