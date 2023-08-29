@@ -786,6 +786,7 @@
 .body {
   font-family: "Open Sans Bold", sans-serif;
 }
+
 .feedback-page {
   display: flex;
   justify-content: center;
@@ -837,7 +838,7 @@
 
 .field {
   box-sizing: border-box;
-  width: 390px;
+  width: 100%;
   padding: 15px 20px;
   background-color: #f4f7f6;
 }
@@ -960,22 +961,141 @@ input[type="radio"] {
 
 /* ============= TABLET============ */
 
-
 @media (max-width: 1200px) {
   .header {
-    background-image: url("../images/banner-bg-tablet.jpg");
+    padding: 40px 0;
+  }
+
+  .header-wrapper {
+    padding: 0 35px;
+  }
+
+  .header-logo-image {
+    width: 160px;
   }
 
   .hamburger-menu {
     display: block;
+  }
+  .hamburger-menu-image {
+    width: 40px;
   }
 
   .header-menu-list {
     display: none;
   }
 
+  .header-title {
+    font-size: 40px;
+    line-height: 55px;
+    padding: 80px 0 80px;
+    max-width: 650px;
+  }
+
+  .trends {
+    margin-top: 40px;
+  }
+
+  .trend-title {
+    font-size: 18px;
+    line-height: 29px;
+  }
+
+  .trend-title::after,
+  .products-title::after {
+    margin: 8px auto 0;
+  }
+
+  .trend-item {
+    margin-top: 20px;
+    height: 250px;
+  }
+
+  .page {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .trend-title,
+  .trend-name,
+  .card-name {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .products-title {
+    font-size: 18px;
+    line-height: 29px;
+  }
+
   .footer-address {
-    margin-top: 50px;
+    margin: 50px 0;
+  }
+
+  @media (orientation: portrait) {
+    .header {
+      background-image: url("../images/banner-bg-tablet.jpg");
+    }
+
+    .page-wrapper {
+      flex-direction: row-reverse;
+      padding: 0 30px;
+    }
+
+    .main {
+      flex-grow: 1;
+      order: 1;
+      margin-right: 35px;
+
+      max-width: 380px;
+    }
+
+    .card {
+      flex-direction: column;
+    }
+
+    .card::after {
+      content: "";
+      display: block;
+      position: relative;
+
+      width: 100%;
+      margin-top: 20px;
+      height: 3px;
+      background: #eeeeee;
+    }
+
+    .card:not(:first-of-type) {
+      margin-top: 40px;
+    }
+
+    .card-image {
+      width: 100%;
+      margin: 0;
+      max-height: none;
+    }
+
+    .card-menu-list {
+      margin: 19px 0 1px;
+    }
+    .card-name {
+      margin-bottom: 25px;
+    }
+
+    .card-meta {
+      margin-bottom: 25px;
+    }
+
+    .card-new:first-of-type {
+      margin-top: 30px;
+    }
+
+    .card-date {
+      margin-bottom: 1px;
+    }
+    .aside-basic-title::after {
+      margin: 10px auto 0;
+    }
   }
 }
 
@@ -995,59 +1115,6 @@ input[type="radio"] {
     margin-top: 0;
   } /*Псевдокласс :nth-child используется для добавления стиля к элементам на основе нумерации в дереве элементов*/
 
-  .page {
-    padding-top: 50px;
-    padding-bottom: 0;
-  }
-
-  .page-wrapper {
-    flex-direction: row-reverse;
-    padding: 0 35px;
-  }
-
-  .aside {
-    flex: none;
-  }
-
-  .main {
-    flex-grow: 1;
-    order: 1;
-    margin-right: 35px;
-  }
-
-  .card {
-    flex-direction: column;
-  }
-
-  .card::after {
-    content: "";
-    display: block;
-    position: relative;
-    /*width: 394px;*/
-    width: 100%;
-    margin-top: 20px;
-    height: 3px;
-    background: #eeeeee;
-  }
-
-  .card:not(:first-of-type) {
-    margin-top: 40px;
-  }
-
-  .card-image {
-    width: 100%;
-    margin: 0;
-    max-height: none;
-  }
-
-  .card-menu-list {
-    margin-top: 17px;
-  }
-
-  .card-meta {
-    margin-bottom: 35px;
-  }
-
   .products {
     flex-direction: row;
     justify-content: space-between;
@@ -1065,56 +1132,21 @@ input[type="radio"] {
   .product-img {
     max-height: none;
   }
-
-  .footer-wrapper {
-    padding: 0 35px;
-  }
-}
-
-@media (max-width: 768px) {
-  .page {
-    align-items: center;
-    padding-top: 0;
-  }
-
-  .page-wrapper {
-    display: block;
-  }
-
-  .main {
-    margin-right: 0;
-  }
-
-  .aside {
-    width: 100%;
-    margin-bottom: 45px;
-  }
-
-  .aside-item {
-    margin-top: 45px;
-  }
 }
 
 @media (max-width: 640px) {
-  .page-wrapper {
+  .header {
+    padding: 25px 0;
+  }
+
+  .header-wrapper {
     padding: 0 15px;
-  }
-  .main {
-    margin-top: 45px;
-  }
-
-  .aside-item:not(:first-child) {
-    margin-top: 40px;
-  }
-
-  .product {
-    width: 100%;
   }
 
   .header-title {
     font-size: 26px;
     line-height: 36px;
-    padding: 40px 0 190px;
+    padding: 30px 0 190px;
   }
 
   .trends {
@@ -1125,16 +1157,43 @@ input[type="radio"] {
     height: 230px;
   }
 
-  .trend-title,
-  .trend-name,
-  .card-name {
-    font-size: 16px;
-    line-height: 20px;
+  .trend-item-content {
+    padding: 15px;
   }
 
-  .product-title {
-    font-size: 17px;
-    line-height: 22px;
+  .page {
+    align-items: center;
+    padding-top: 0;
+  }
+  .page-wrapper {
+    display: block;
+    padding: 0 15px;
+  }
+
+  .main {
+    margin-top: 45px;
+    margin-right: 0;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card::after {
+    content: "";
+    display: block;
+    position: relative;
+
+    width: 100%;
+    margin-top: 20px;
+    height: 3px;
+    background: #eeeeee;
+  }
+
+  .card-image {
+    width: 100%;
+    margin: 0;
+    max-height: none;
   }
 
   .card-text > p {
@@ -1149,6 +1208,47 @@ input[type="radio"] {
   .card-name,
   .card-meta {
     margin-bottom: 20px;
+  }
+
+  .aside {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+
+  .aside-item {
+    margin-top: 40px;
+  }
+
+  .aside-item:not(:first-child) {
+    margin-top: 40px;
+  }
+  .list-themes-item:first-of-type {
+    margin-top: 20px;
+  }
+  .list-themes-item {
+    margin-top: 8px;
+  }
+  .product {
+    width: 100%;
+  }
+
+  .trend-title,
+  .trend-name,
+  .card-name,
+  .feedback-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .products-title,
+  .aside-basic-title {
+    font-size: 16px;
+    line-height: 29px;
+  }
+
+  .product-title {
+    font-size: 17px;
+    line-height: 22px;
   }
 
   .footer-wrapper {
@@ -1166,7 +1266,7 @@ input[type="radio"] {
 
     .header-menu {
       align-self: flex-end;
-      padding-bottom: 175px;
+      padding-bottom: 160px;
     }
 
     .header-logo-image {
@@ -1185,22 +1285,22 @@ input[type="radio"] {
       margin-top: 0;
     }
 
-    .tegs-menu-list {
-      justify-content: space-between;
-    }
-
     .card:not(:first-of-type) {
       margin-top: 35px;
+    }
+
+    .tegs-menu-list {
+      justify-content: space-between;
     }
 
     .footer-address {
       margin: 40px 0;
     }
-    
+
     .popup__content {
       width: 90%;
     }
-    
+
     .feedback-page {
       padding: 30px 0;
     }
