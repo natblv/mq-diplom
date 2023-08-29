@@ -1087,6 +1087,11 @@ input[type="radio"] {
     margin-right: 35px;
   }
 
+  .aside {
+    flex: none;
+  }
+
+
   .card {
     flex-direction: column;
   }
