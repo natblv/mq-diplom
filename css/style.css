@@ -1155,6 +1155,8 @@ input[type="radio"] {
     font-size: 26px;
     line-height: 36px;
     padding: 30px 0 190px;
+
+    text-align: center;
   }
 
   .trends {
